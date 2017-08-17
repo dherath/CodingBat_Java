@@ -1,0 +1,5 @@
+public class testFix34Order extends fix34Order{
+    public static void main(String args[]) {
+	
+    }
+}
