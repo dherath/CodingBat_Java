@@ -11,9 +11,10 @@ public class testFix34Order extends fix34Order{
 	}
 	System.out.println("]");
 
+	int[] out1 = func.fix34(temp1);
 	System.out.print("new array [");
 	//int[] out1 = func.fix34Order(temp1);
-	for(int val:func.fix34(temp1)){
+	for(int val:out1){
 	    System.out.print(val+" ");
 	}
 	System.out.println("]");
