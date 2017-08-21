@@ -1,0 +1,6 @@
+public class testFix45Order extends fix45Order{
+    public static void main(STring args[]) {
+
+	
+    }
+}
