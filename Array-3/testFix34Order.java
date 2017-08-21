@@ -1,6 +1,6 @@
 public class testFix34Order extends fix34Order{
     public static void main(String args[]) {
-	int[] temp1 = {1,2,3,5,6,4,3};
+	int[] temp1 = {1,2,3,5,6,4,3,8,4};
 	int[] temp2 = {5,6,5,3,6,4,1};
 
 	fix34Order func = new fix34Order();
