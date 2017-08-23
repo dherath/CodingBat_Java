@@ -1,5 +1,5 @@
 public class fix45Order{
-
+    // method works
     public int[] fix45(int[] nums) {
 	int limit = nums.length;
 	int i=0;
