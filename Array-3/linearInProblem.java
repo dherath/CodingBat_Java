@@ -1,5 +1,5 @@
 public class linearInProblem{
-
+    // works
    public  boolean linearIn(int[] outer,int[] inner) {
 	for(int innerVal : inner){
 	    if(!this.insideChecker(innerVal,outer)){
