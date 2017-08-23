@@ -1,37 +1,38 @@
 public class fix45Order{
 
     public int[] fix45(int[] nums) {
-	int[] IndexOf4 = this.findIndex(nums,4);
-	int[] IndexOf5 = this.findIndex(nums,5);
-	int limit = this.find4s(nums);
-	for(int i=0;i<limit;i++) {
-	    int temp = nums[IndexOf4[i]+1];
-	    nums[IndexOf4[i]+1]=nums[IndexOf5[i]];
-	    nums[IndexOf5[i]]=temp;
+	int limit = nums.length;
+	int i=0;
+	while(i<limit-1){
+	    if(nums[i]==4 && nums[i+1]!=5){
+		int index = this.find5(nums);
+		int temp = nums[i+1];
+		nums[i+1]=nums[index];
+		nums[index]=temp;
+	    }else{
+		i++;
+	    }
 	}
 	return nums;
     }
 
-    public int find4s(int[] array) {
-	int count =0;
-	for(int temp:array) {
-	    if(temp==4){
-		count++;
-	    }
-	}
-	return count;
-    }
-
-    public int[] findIndex(int[] array, int number) {
-	int[] index = new int[this.find4s(array)];
-	int count =0;
-	for(int i=0;i<array.length;i++) {
-	    if(array[i]==number){
-		index[count]=i;
-		count++;
+    public int find5(int[] nums) {
+	int index =0;
+	boolean flag=false;
+	if(nums[0]==5){
+	    return index;
+	}else{
+	    index++;
+	    while(index<nums.length && !flag) {
+		if(nums[index]==5 && nums[index-1]!=4){
+		    flag=true;
+		}else{
+		    index++;
+		}
 	    }
 	}
 	return index;
     }
-    
+
 }
+ 
